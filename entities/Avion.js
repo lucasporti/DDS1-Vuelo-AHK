@@ -1,4 +1,4 @@
-export default class Avion {
+export class Avion {
   cantAsientos;
   descripcion;
   constructor(cantAsientos, descripcion){
