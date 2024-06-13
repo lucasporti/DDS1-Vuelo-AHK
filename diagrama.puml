@@ -1,0 +1,81 @@
+@startuml
+class Ciudad {
+    nombre;
+    aeropuertos;
+    agregarAeropuerto();
+    cantAeropuertos();
+    cantPasajerosQueLlegaronEl(dia);
+    tenesAeropuerto(unAeropuerto);
+}
+
+class Aeropuerto {
+    nombre;
+}
+
+class Viaje {
+    vuelos;
+    escalas;
+    agregarVuelo(vuelo);
+    agregarEscala(escala);
+    duracionTotalEscalas();
+    duracionTotalVuelos();
+    duracionTotalAproxEnMins();
+}
+
+class Escala {
+    aeropuerto;
+    duracionAproxEnMins;
+}
+
+class Vuelo {
+    pasajeros = [];
+    tripulacion = [];
+    avion;
+    fechaHoraPartida;
+    fechaHoraLlegada;
+    aeropuertoSalida;
+    aeropuertoLlegada;
+    duracionAproxEnMins;
+    agregarPasajero(pasajero);
+    capacidadOcupadaPorPasajeros();
+    partisteDe(unAeropuerto);
+    llegasteA(unAeropuerto);
+    salisteEnFecha(fecha);
+    llegasteEnFecha(fecha);
+    cantPasajeros();
+}
+
+class Pasajero {
+    nombre;
+    apellido;
+    agregarVuelo(unVuelo);
+    cantVuelos();
+    cantVecesQueVisitaste(unaCiudad);
+}
+
+class Empleado {
+    tipo;
+    nombre;
+    apellido;
+    aerolinea;
+}
+
+class Avion {
+    cantAsientos;
+    descripcion;
+}
+
+class Aerolinea {
+    vuelos;
+}
+
+Ciudad -> Aeropuerto
+Vuelo -> Aeropuerto
+Vuelo -> Pasajero: *
+Vuelo -> Empleado: *
+Vuelo -> Avion
+Aerolinea -> Vuelo: *
+Empleado -> Aerolinea
+Viaje -> Vuelo: *
+Viaje -> Escala: *
+Escala -> Aeropuerto

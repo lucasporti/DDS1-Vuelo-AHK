@@ -28,7 +28,7 @@ test("La capacidad de pasajeros es de 50%", () => {
   vuelo.avion = avion;
   
   // Ejecutamos el método que queremos testear  y guardamos su resultado
-  let capacidadAvion = vuelo.capacidadOcupadaPorPasajero();
+  let capacidadAvion = vuelo.capacidadOcupadaPorPasajeros();
 
   // Creamos el valor conocido / esperado
   let capacidadEsperada = 50;
