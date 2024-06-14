@@ -1,6 +1,10 @@
 export class Aerolinea {
-  vuelos;
-  constructor(vuelos){
-    this.vuelos = vuelos;
+  constructor(nombre) {
+    this.nombre = nombre;
+    this.aviones = [];
+  }
+
+  agregarAvion(unAvion) {
+    this.aviones.push(unAvion);
   }
 }

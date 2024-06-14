@@ -1,8 +1,15 @@
 export class Avion {
   cantAsientos;
   descripcion;
-  constructor(cantAsientos, descripcion){
-    this.cantAsientos = cantAsientos;
-    this.descripcion = descripcion;
+  aerolinea;
+  vuelos = [];
+
+  constructor(aerolinea){
+    this.aerolinea = aerolinea;
   }
+
+  agregarVuelo(unVuelo){
+    this.vuelos.push(unVuelo);
+  }
+
 }

@@ -2,6 +2,7 @@ export class Aeropuerto {
   nombre;
   vuelos = [];
   escalas = [];
+  aerolineas = [];
 
   constructor(nombre){
     this.nombre = nombre;
@@ -9,6 +10,10 @@ export class Aeropuerto {
 
   agregarEscala(unaEscala) {
     this.escalas.push(unaEscala);
+  }
+
+  agregarAerolinea(unaAerolinea){
+    this.aerolineas.push(unaAerolinea);
   }
 
   agregarVuelo(vuelo) {
