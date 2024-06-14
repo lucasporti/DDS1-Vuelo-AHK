@@ -34,3 +34,5 @@ test("Un vuelo llegó el 2024/06/07 a Berlin", () => {
 
   expect(cantObtenida).toBe(1);
 });
+
+test("El aeropuerto que recibió menos vuelos en escalas fue el aeropuerto de 'San Francisco'")
